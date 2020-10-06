@@ -1,0 +1,41 @@
+{% extends 'Admin/index.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="stylesheet" href="/assets/css/biographyAdmin.css">
+{% endblock %}
+{% block admin %}
+    <section class="container">
+        <table class="resp-table">
+            <thead class="thead-dark">
+            <tr>
+                <th class="year" scope="col">Année</th>
+                <th class="infos" scope="col">Biographie</th>
+                <th class="option end" scope="col">
+                    <a class="more btn" href="/BiographyAdmin/Add"><i class="fas fa-plus"></i></a>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% block add %}
+            {% endblock %}
+            {% for year, biographies in data %}
+                {% for biography in biographies %}
+                    {% if biography.id == id %}
+                        {% block AditionalContent %}
+                        {% endblock %}
+                    {% else %}
+                        <tr class="cell">
+                            <td class="yearValue">{{ year }}<span class="anchor" id="{{ biography.id }}"></span></td>
+                            <td class="cellinfo">{{ biography.info }}</td>
+                            <td class="admArtLink">
+                                <a class="btn" href="/BiographyAdmin/Edit/{{ biography.id }}#{{ biography.id }}"><i class="fas fa-edit"></i></a>
+                                <a class="btn" href="/BiographyAdmin/Delete/{{ biography.id }}#{{ biography.id }}"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

@@ -1,0 +1,233 @@
+.artwork {
+    padding-top: var(--padding-sm);
+    padding-bottom: var(--padding-sm);
+    background-color: var(--color-light-transparent);
+}
+
+.artwork h2{
+    font-size: calc(var(--sizeTitle) / 2);
+    font-family: var(--font-title);
+    text-align: center;
+    color: var(--color-main);
+}
+
+.artworks_errors{
+    width: 100%;
+    margin-top:32px;
+    text-align: center;
+    background-color: var(--color-main);
+    color:var(--color-light);
+    font-weight: 700;
+}
+.error_picture {
+    width: 100%;
+    text-align: center;
+}
+.artwork .card-deck{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: inherit;
+    justify-content: space-around;
+    padding-bottom: 32px;
+    margin: 0;
+}
+.artwork .card_artwork:nth-child(even){
+    flex-direction: column-reverse;
+}
+
+.artwork .card_artwork{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+    color: var(--color-main);
+    width: 350px;
+    margin-top: 32px;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+}
+.card_artwork .picture {
+    overflow: hidden;
+    max-height: 350px;
+}
+
+.artwork .card-body{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.artwork .card-text{
+    margin : 24px 10px 32px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+.artwork .card-info{
+    font-size: 10pt;
+    font-weight: 600;
+}
+.artwork .card-title{
+    text-align: center;
+    padding : 24px 10px 32px 10px;
+    background-color: var(--color-light);
+    color: var(--color-main);
+    font-weight: 800;
+    font-size: 24px;
+}
+.artwork .card-title img{
+    height: 50px;
+    padding-bottom: 15px;
+}
+.artworks .card-title{
+    font-weight: 600;
+    font-size: 24px;
+}
+.artwork .card_artwork .link a {
+    border-style: solid;
+    border-color: var(--color-main);
+    border-width: 1px;
+    border-radius: 2px;
+    font-size: 1rem;
+    color: var(--color-main);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    margin: 5px 0 5px 0;
+    line-height: 24pt;
+}
+.artwork .card_artwork .link a:hover {
+    color: var(--color-light);
+    background-color: var(--color-main);
+    transition: 150ms;
+}
+.artwork .card_artwork .link{
+    display: flex;
+    flex-wrap: wrap;
+}
+.descr_detail a{
+    color: var(--color-main);
+}
+.descr_detail a:hover{
+    color: black;
+    text-decoration: none;
+    transition: 300ms;
+ }
+
+.artwork .card_artwork .link div{
+    margin: auto;
+}
+.artwork .card-info{
+    margin : 24px 10px 32px 10px;
+}
+.artwork .more_info{
+    font-size: 10pt;
+    font-weight: bold;
+}
+    /*
+    barre de tri des oeuvres
+    */
+.sort_img_label{
+    height: 79px;
+    text-align: center;
+    border-style: none;
+}
+.sort_img_label img{
+    height: 50px;
+    padding-bottom: 8px;
+}
+
+.bloc_sort_link{
+    align-items: flex-end;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.bloc-sort-artworks{
+    display: flex;
+    justify-content: space-around;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: var(--color-main);
+    border-bottom-style: solid;
+    position: relative;
+    margin: 15px;
+    padding: 15px;
+}
+.sort-artworks-title{
+    position: absolute;
+    padding-left:15px;
+    padding-right:15px;
+    text-align: center;
+    margin: auto;
+    top : -13px;
+
+    background-color: var(--color-secondary);
+}
+.sort-artworks a{
+    padding: 4pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-main);
+    border-radius: 2pt;
+    background-color: var(--color-light);
+    color: var(--color-main);
+}
+.sort-artworks a:hover{
+    text-decoration: none;
+    border-radius: 2pt;
+    background-color: var(--color-main);
+    color :var(--color-light);
+    transition: 300ms;
+}
+/*
+
+Page single - une oeuvre seule.
+
+*/
+.bloc_details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-light);
+}
+.title_details h2{
+    margin : 5px;
+}
+.title_details img{
+    width: 100%;
+}
+.title_details{
+    min-width: 350px;
+    background-color: var(--color-main);
+    color: var(--color-light);
+    margin: 15px;
+}
+.logo_theme{
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-main);
+}
+.descr_detail{
+    overflow: hidden;
+    min-width: 350px;
+    max-width:500px;
+    margin: 15px;
+}
+.descr_detail div{
+    margin-bottom: 24px;
+}
+.descr_detail img {
+    padding-right: 15px;
+}
+.info{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pictos{
+    font-size: 1.7em;
+    color: var(--color-main);
+}

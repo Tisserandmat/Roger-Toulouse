@@ -1,0 +1,33 @@
+{% extends 'BiographyAdmin/index.html.twig' %}
+{% block add %}
+    <tr></tr>
+    <form action="/BiographyAdmin/Add" method="post" id="formAdd"></form>
+    <tr class="cell adder" id="0">
+        <td class="yearValue"><form id="formAdd"><label for="year" hidden></label><input type="number" name="year" id="year" value="{{ post is empty ? '' : post.year }}" form="formAdd"></form></td>
+        <td class="cellinfo">
+            <form id="formAdd">
+                <label for="biography" hidden></label>
+                <textarea name="biography" id="biography" form="formAdd">{{ post is empty ? '' : post.biography|nl2br }}</textarea>
+            </form>
+        </td>
+        <td class="admArtLink option">
+            <input type="hidden" name="control" value="add" id="add">
+            <button class="btn" form="formAdd"><i class="fas fa-check"></i></button>
+            <a class="btn" href="/BiographyAdmin/Index"><i class="fas fa-times"></i></a>
+        </td>
+    </tr>
+    {% if errors.year is defined %}
+        {% for error in errors.year %}
+            <tr class="error">
+                <td colspan="4">{{ error }}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+    {% if errors.biography is defined %}
+        {% for error in errors.biography %}
+            <tr class="error">
+                <td colspan="4">{{ error|nl2br }}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

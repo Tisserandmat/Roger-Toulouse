@@ -1,0 +1,98 @@
+table{
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-main);
+    min-width: 100%;
+}
+.container{
+    margin-bottom: 50px;
+}
+.id{
+    scroll-behavior: auto;
+    scroll-snap-align: center;
+    scroll-padding-top: 100px;
+    text-align: center;
+    width: 5%;
+}
+.year{
+    width: 10%;
+}
+.infos{
+    width: auto;
+    text-align: left;
+}
+.cell{
+    text-align: center;
+    scroll-margin-block-start: 200px;
+}
+.cellinfo{
+    text-align: left;
+}
+.option{
+    width: 10%;
+}
+table thead{
+    color: var(--color-light);
+    background-color: var(--color-main) ;
+    text-align: center;
+}
+th{
+    position: sticky;
+    background-color: var(--color-main) ;
+    height: 60px;
+    top: 60px;
+    z-index: 5;
+}
+table tbody tr:nth-child(even){
+    background-color: var(--color-light);
+}
+table tbody tr:nth-child(odd){
+    background-color: var(--color-secondary);
+}
+table tbody tr:nth-child(odd).error{
+    background-color: var(--color-error);
+}
+table tbody tr:nth-child(even).error{
+    background-color: var(--color-error);
+}
+a{
+    color: var(--color-light);
+    text-decoration: none;
+}
+td.admArtLink{
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 100px;
+}
+.admArtLink div{
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-main);
+}
+.error{
+    text-align: center;
+    color: var(--color-light);
+    font-weight: bold;
+    background-color: var(--color-error);
+    border-left: var(--color-error) 4px solid;
+    border-right: var(--color-error) 4px solid;
+    border-bottom: var(--color-error) 4px solid;
+}
+.message{
+    text-align: center;
+    color: var(--color-light);
+    font-weight: bold;
+    background-color: var(--color-main);
+    border-bottom: var(--color-secondary) 2px solid;
+}
+.deleter{
+    border-top: var(--color-error) 4px solid;
+    border-left: var(--color-error) 4px solid;
+    border-right: var(--color-error) 4px solid;
+}
+.anchor{
+    display: block;
+    height: 50vh; /* 50% viewport height */
+    margin-top: -50vh;
+    visibility: hidden;
+}

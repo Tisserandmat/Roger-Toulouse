@@ -1,0 +1,20 @@
+html{
+    scroll-behavior: unset;
+}
+
+table{
+    margin-top: 100px;
+}
+textarea, input{
+    width: 100%;
+}
+textarea{
+    min-height: 200px;
+}
+.confirm{
+    padding-top: 200px;
+    text-align: center;
+}
+.yearValue input{
+    text-align: center;
+}

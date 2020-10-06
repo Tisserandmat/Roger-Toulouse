@@ -1,0 +1,9 @@
+.headerBiography{
+    font-family: var(--font-title);
+    color: var(--color-main);
+    border-radius: var(--border-radius);
+}
+.headerBiography p{
+    font-family: var(--font-text);
+    color: var(--color-main);
+}

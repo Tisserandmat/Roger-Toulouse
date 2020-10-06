@@ -1,0 +1,40 @@
+{% extends 'Admin/index.html.twig' %}
+
+{% block admin %}
+    <div class="adminNews container d-flex justify-content-center mt-5">
+        <table>
+            <thead>
+            <tr>
+                <td>Titre</td>
+                <td class="description">Description</td>
+                <td class="d-flex justify-content-end">
+                    <a class="btn" href="/HomeAdmin/add/">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for new in news %}
+                <tr>
+                    <td class="d-flex justify-content-center">{{ new.title }}</td>
+                    <td>{{ new.desc }}</td>
+                    <td class="d-flex justify-content-end">
+                        <a class="btn" href="/HomeAdmin/edit/{{ new.id }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <form action="/HomeAdmin/delete/{{ new.id }}" method="post">
+                            <input name="action" value="delete" hidden>
+                            <input name="id" value="{{ new.id }}" hidden>
+                            <button class="btn"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+
